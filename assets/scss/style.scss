@@ -1,0 +1,235 @@
+@import'./abstracts/variables';
+@import'./abstracts/common';
+@import './mixins/breakpoints';
+
+.container-fluid {
+    .header {
+        width: 100%;
+        .offcanvas {
+            background-color: $blue-txt-color;
+            .sidebar-ul {
+                .li {
+                    text-align: justify;
+                    .an {
+                        &:hover {
+                            color: $orange-txt-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // sidemenu
+    @include media-min-lg {
+        .content-wrapper {
+            width: 100%;
+        }
+        .content-right-wrapper {
+            width: 85%;
+            z-index: 1;
+            margin-left: 15%;
+        }
+    }
+    .sidemenu {
+        @include media-min-lg {
+            background-color:$blue-txt-color;
+            width: 15%;
+            height: 100vh;
+
+            .sidebar-ul {
+                .li {
+                    a {
+                        &:hover {
+                            color: $orange-txt-color;
+                        }
+                        &:active {
+                            color: $color1;
+                        }
+                    }
+                    &:active {
+                        background-color:$orange-txt-color;
+                    }
+                }
+            }
+        }
+    }
+    // contenet section
+    .content-right-wrapper {
+        margin-top: 20%;
+        @include media-min-md{
+            margin-top: 10%;
+        }
+        .user {
+            box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+        }
+    }
+
+    // time sheet section starts
+    .timesheet {
+        @include media-min-lg{
+            width: 100% !important;
+        }
+        .left {
+            @include media-min-md-x {
+            }
+            * {
+                margin: 0 5px;
+            }
+            h3 {
+                color:$blue-txt-color;
+            }
+        }
+        .right {
+            .time-btn {
+                width: 100%;
+                margin: 0 auto;
+                background-color:$orange-txt-color;
+            }
+            h5 {
+                color: $blue-txt-color;
+            }
+
+            // from control
+            .offcanvas-body {
+                .container {
+                    width: 250px;
+                    margin-top: -10px;
+                }
+
+                .progress-bar-back {
+                    height: 4px;
+                    width: 81%;
+                    background-color: $orange-txt-color;
+                    border: none;
+                    z-index: -1;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                .progress-bar-front {
+                    height: 4px;
+                    width: 0%;
+                    background-color: $orange-txt-color;
+                    border: none;
+                    z-index: -1;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: 0.4s linear width;
+                }
+
+                .step {
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid $orange-txt-color;
+                    color: $orange-txt-color !important;
+                    position: relative;
+
+                    p {
+                        position: absolute;
+                        top: 10%;
+                    }
+
+                    small {
+                        color: $orange-txt-color;
+                        position: absolute;
+                        bottom: -30px;
+                    }
+                }
+                .step.checked {
+                    background-color: $orange-txt-color;
+                    color: #f1f1f1;
+                    transition: all 0.4s linear;
+                    transition-delay: 0.3s;
+                }
+            }
+
+            .step1 {
+                select,
+                input {
+                    width: 100%;
+                }
+            }
+            .step1-hide {
+                display: none;
+            }
+
+            .step1-show {
+                display: block;
+            }
+
+            .step2 {
+                display: none;
+
+                .file {
+                    border: 2px dotted gray;
+                }
+            }
+
+            .step2-show {
+                display: block;
+            }
+        }
+
+        #offcanvasRight {
+            @include media-min-md-x {
+                width: 75%;
+            }
+
+            @include media-min-lg {
+                width: 45%;
+            }
+        }
+                .checkin-clockout {
+                    @include media-min-md-x {
+                        .date,
+                        .clock {
+                            flex: 1 0 0;
+                        }
+                    }
+                }
+
+        .hotelcost {
+            @include media-min-md-x {
+                .cost,
+                .daily-diem {
+                    flex: 1 0 0;
+                }
+            }
+
+            @include media-min-lg {
+                .cost,
+                .daily-diem {
+                    width: 42%;
+                }
+            }
+
+        }
+    }
+}
+// table section starts
+.table {
+    white-space: nowrap;
+}
+// pagination section starts
+.pagination {
+    .page-right {
+        ul {
+            li {
+                &:hover .pg-a {
+                    background-color: $orange-txt-color;
+                    border-radius: 50%;
+                    padding: 1px 7px;
+                    color: $color1 !important;
+                } 
+            }
+        }
+    }
+}
+
+// footer section starts
+.footer {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    p {
+        color: $blue-txt-color;
+    }
+}

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap link -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- google fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <!-- font awsome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+  integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<!-- box icon cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Time sheet Task</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./public/css/style.min.css">
+    <!-- js link -->
+    <script defer src="./assets/js/main.js"></script>
+</head>
+
+<body>
+    <section class="container-fluid ">
+        <div class="header d-flex flex-row justify-content-between py-3 position-fixed top-0 start-0 bg-light px-2 d-lg-none">
+            <div class="sidebar d-block d-lg-none">
+                <button class="btn text-white " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"><i class='bx bx-menu'></i></button>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <img src="./assets/img/Icons/ats_logo.png" alt="" class="img" style="width: 150px; height:60px">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body ps-1">
+                        <ul class="sidebar-ul ps-0 ">
+
+                            <li class="li py-3 d-flex align-items-center border-bottom border-1 border-white"><a href="./progress.html" class="an text-white fs-5 "><img src="./assets/img/Icons/Admin/dashboard.svg" alt="" class="me-2" style="width: 21px;"> Dashboard</a></li>
+
+                            <li class="li py-3 d-flex align-items-center border-bottom border-1 border-white"><a href="./progress.html" class="an text-white fs-5"><img src="./assets/img/Icons/Admin/task_list.svg" alt="" class="me-2" style="width: 21px;"> Task View</a></li>
+ 
+                            <li class="li py-3 d-flex align-items-center border-bottom border-1 border-white"><a href="./progress.html" class="an text-white fs-5"><img src="./assets/img/Icons/Admin/schedule.svg" alt="" class="me-2" style="width: 21px;"> Schedule</a></li>
+ 
+                            <li class="li py-3 d-flex align-items-center border-bottom border-1 border-white"><a href="./index.html" class="an text-white fs-5"><img src="./assets/img/Icons/User/timesheet.svg" alt="" class="me-2" style="width: 21px;"> Timesheet</a></li>
+
+                            <li class="li py-3 d-flex align-items-center border-bottom border-1 border-white"><a href="./progress.html" class="an text-white fs-5"><img src="./assets/img/Icons/Admin/invoice.svg" alt="" class="me-2" style="width: 21px;"> Invoice</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user d-flex align-items-center pe-3 d-block d-lg-none">
+                <div class="notify-span">
+                    <img src="./assets/img/Icons/Admin/clarity_notification-solid.svg" alt="" class="mx-2" style="width:28px;">
+                    <span class="text-white border-rounded">3</span>
+                    </div>
+                <p class="mt-3 pe-1">User</p>
+                <img src="./assets/img/Icons/Admin/user_profile.svg" alt="" class="user-img" style="width:38px;">
+            </div>
+        </div>
+        <!-- header section ends -->
+        <div class="content-wrapper d-lg-flex d-lg-flex-row bg-light"> 
+            <!-- desktop sidebar -->
+            <div class="sidemenu col-lg-4 p-3 d-none d-lg-block position-fixed top-0 start-0" id="">
+                <div class="offcanvas-header d-flex justify-content-center">
+                    <img src="./assets/img/Icons/ats_logo.png" alt="" class="img" style="width:100px;">
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="sidebar-ul pt-lg-4 ps-lg-1">
+
+                        <li class="li py-lg-2 border-bottom border-1 border-white"><a href="./progress.html"class="an fs-6 d-lg-flex flex-lg-row align-items-center pb-lg-1 text-white"><img src="./assets/img/Icons/Admin/dashboard.svg" alt="" style="width:15px;" class="me-2 mt-0"> Dashboard</a></li>
+
+                        <li class="li py-lg-2 border-bottom border-1 border-white"><a href="./progress.html"class="an fs-6 d-lg-flex flex-lg-row align-items-center pb-lg-1 text-white"><img src="./assets/img/Icons/Admin/task_list.svg" alt="" style="width:15px;" class="me-2 mt-0"> Task View</a></li>
+
+                        <li class="li py-lg-2 border-bottom border-1 border-white"><a href="./progress.html"class="an fs-6 d-lg-flex flex-lg-row align-items-center pb-lg-1 text-white"><img src="./assets/img/Icons/Admin/schedule.svg" alt="" style="width:15px;" class="me-2 mt-0"> Schedule</a></li>
+
+                        <li class="li py-lg-2 border-bottom border-1 border-white"><a href="./index.html"class="an fs-6 d-lg-flex flex-lg-row align-items-center pb-lg-1 text-white"><img src="./assets/img/Icons/User/timesheet.svg" alt="" style="width:15px;" class="me-2 mt-0"> Timesheet</a></li>
+
+                        <li class="li py-lg-2 border-bottom border-1 border-white"><a href="./progress.html"class="an fs-6 d-lg-flex flex-lg-row align-items-center pb-lg-1 text-white"><img src="./assets/img/Icons/Admin/invoice.svg" alt="" style="width:15px;" class="me-2 mt-0"> Invoice</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- desktop sidebar ends -->
+            <div class="content-right-wrapper mt-lg-0">
+                <div class="user d-flex justify-content-end p-3 desk-user desk-user-right align-items-center d-none d-lg-block d-lg-flex ">
+                    <div class="notify-span">
+                    <img src="./assets/img/Icons/Admin/clarity_notification-solid.svg" alt="">
+                    <span class="text-white border-rounded">3</span>
+                    </div>
+                    <p class="mx-3 my-2">User</p>
+                    <img src="./assets/img/Icons/Admin/user_profile.svg" alt="" class="user-img mx-2" style="width: 42px;">
+                </div>
+                <!-- time sheet section starts -->
+                <div class="timesheet mb-2 col-lg-8 bg-light d-lg-flex align-items-lg-center justify-content-lg-between">
+                    <div class="left d-flex flex-column py-3 d-sm-flex flex-sm-row mx-2 align-items-sm-center justify-content-sm-between">
+                        <h3 class="py-2 fw-semibold mx-2">Timesheet</h3>
+                        <div class="input d-flex align-items-center">
+                            <input type="search" name="search" id="search" placeholder="Search" class="py-2 border-0 outline-0 mx-2 text-secondary" onkeyup="myFunction()">
+                            <i class='bx bx-search-alt-2 search'></i>
+                        </div>
+                        <div class="show-entires d-flex justify-content-between mx-2">
+                            <p class="py-2 mx-2 text-secondary">Show</p>
+                            <select name="select" id="select" class="mx-2 text-secondary">
+                                <option selected value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="1">5</option>
+                                <option value="1">6</option>
+                                <option value="1">7</option>
+                                <option value="1">8</option>
+                                <option value="1">9</option>
+                                <option  value="1">10</option>
+
+                            </select>
+                            <p class="py-2 mx-2 text-secondary">entires</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button class="btn p-2 align-items-center time-btn text-white" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img
+                                src="./assets/img/Icons/User/fill_timesheet.svg" alt="" class="mx-2" style="height:20px;width: 20px; "> Daily Timesheet</button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                            aria-labelledby="offcanvasRightLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title fw-bold" id="offcanvasRightLabel">Daily Timesheet</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="container text-center d-flex justify-content-between mb-5 position-relative">
+                                    <hr class="progress-bar-back position-absolute m-0" />
+                                    <hr class="progress-bar-front position-absolute m-0" />
+                                    <div class="step checked d-flex align-items-center justify-content-center bg-light rounded-circle">
+                                        <p class="position-absolute">1</p>
+                                        <small>step1</small>
+                                    </div>
+                                    <div class="step step2-p d-flex align-items-center justify-content-center bg-light rounded-circle">
+                                        <p class="position-absolute">2</p>
+                                        <small>step2</small>
+                                    </div>
+                            
+                                </div>
+                                <div class="step1">
+                                    <h6 class="text-primary font-weight-italic">Project <span
+                                            class="text-warning">*</span>
+                                    </h6>
+                                    <div class="input-group mb-2">
+                                        <select class="custom-select text-secondary p-1 border border-1 border-secondary" id="inputGroupSelect01">
+                                            <option selected>Mountain View</option>
+                                            <option value="1">Forest View</option>
+                                        </select>
+                                    </div>
+                                    <h6 class="text-primary font-weight-italic">Staff Member <span
+                                            class="text-warning">*</span>
+                                    </h6>
+                                    <div class="input-group mb-2">
+                                        <select class="custom-select text-secondary p-1 border border-1 border-secondary" id="inputGroupSelect01">
+                                            <option selected>Alexzander McQueen</option>
+                                        </select>
+                                    </div>
+                                    <div class="date-cost mb-2">
+                                        <div class="checkin-clockout mb-3 d-md-flex justify-content-md-between gap-md-5">
+                                            <section class="date">
+                                                <h6 class="text-primary font-weight-italic">Date and Check In<span
+                                                        class="text-warning">*</span></h6>
+                                                <p class="text-secondary lh-1">At what time did you arrive at site ?</p>
+                                                <p class="text-secondary lh-1">Careful with the a.m and p.m selection</p>
+                                                <input type="datetime-local" name="date-time" id="date-time" class="p-1 border border-1 border-secondary ">
+                                            </section>
+                                            <section class="clock mb-2 mt-4 d-md-flex flex-md-column justify-content-md-between">
+                                                <h6 class="text-primary font-weight-italic">Clock out<span
+                                                        class="text-warning">*</span></h6>
+                                                <p class="text-secondary">At what time did you arrive at site?</p>
+                                                <input type="datetime-local" name="date-time" id="date-time" class="p-1 border border-1 border-secondary">
+                                            </section>
+                                        </div>
+                                        <div class="hotelcost mb-2 d-md-flex justify-content-md-between gap-md-5">
+                                            <section class="cost mb-2">
+                                                <h6 class="text-primary font-weight-italic">Daily Hotel Cost<span
+                                                        class="text-warning">*</span></h6>
+                                                <p class="text-secondary">Please enter the amount</p>
+                                                <input type="text" name="cost-text" id="cost-text"
+                                                    placeholder="$159.00" class="p-1 border border-1 border-secondary">
+                                            </section>
+                                            <div class="daily-diem mb-2 ps-0">
+                                                <h6 class="text-primary font-weight-italic">Daily Per Diem<span
+                                                        class="text-warning">*</span></h6>
+                                                <p class="text-secondary">Please enter the amount</p>
+                                                <input type="text" name="cost-text" id="cost-text" placeholder="$50.00" class="p-1 border border-1 border-secondary">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mileage mb-2">
+                                        <h6 class="text-primary font-weight-italic">Daily Mileage<span
+                                                class="text-warning">*</span></h6>
+                                        <p class="text-secondary">Total allowable miles today, if any?</p>
+                                        <input type="text" name="" id="mileage-text" class="p-1 border border-1 border-secondary">
+                                    </div>
+
+                                    <div class="text-end cancel-nxt mt-3">
+                                        <button class="btn btn-primary btn-sm p-1" id="cancel-btn" data-bs-dismiss="offcanvas">Cancel</button>
+                                        <button type="button" class="btn btn-warning btn-sm p-1 text-white" id="nxt-btn">Next</button>
+                                    </div>
+                                </div>
+                                <div class="step2 step2-hide">
+                                    <div class="one mb-1">
+                                        <h6 class="text-primary font-weight-italic">Work Completed today<span
+                                            class="text-warning">*</span></h6>
+                                        <p class="text-secondary">Give a brief description of work completed today</p>
+                                        <textarea name="" id="" cols="30" rows="2" placeholder="we installed j hook and pull cat6"></textarea> 
+                                    </div>
+                                    <div class="two">
+                                        <h6 class="text-primary font-weight-italic">Special notes<span
+                                            class="text-warning">*</span></h6>
+                                        <p class="text-secondary">Any unique or outstanding project items</p>
+                                        <textarea name="" id="" cols="30" rows="2"></textarea> 
+                                    </div>
+                                    <div class="three">
+                                        <h6 class="text-primary font-weight-italic">Photo<span
+                                            class="text-warning">*</span></h6>
+                                        <p class="text-secondary">A picture of the work done or an issue encountered</p>
+                                        <div class="file p-2 mb-1">
+                                            <p class="d-flex align-items-center justify-content-center mb-0"><i class='bx bx-down-arrow-circle'></i>Drop files here</box-icon></p>
+                                        </div>
+                                    </div>
+                                    <div class="four d-flex align-items-center mb-2">
+                                        <input type="checkbox" name="check" id="check">
+                                        <h6 class="text-primary font-weight-italic mb-1 ms-2">Did you bought or rented equipment for the job?<span
+                                            class="text-warning">*</span></h6>
+                                    </div>
+                                    <div class="hrs-btn d-flex justify-content-center">
+                                        <button class="btn btn-primary align-middle p-2 mt-1 mb-1 justify-content-center">Add my hours</button>
+                                    </div>
+                                    <h6 class="text-primary text-center mt-2">Never submit password through this form. Report malicious form</h6>
+                                    <div class="text-end cancel-nxt mt-2">
+                                        <button class="btn btn-primary btn-sm p-1" id="Previous-btn">Previous</button>
+                                        <button type="button" class="btn btn-warning btn-sm p-1 text-white">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- time sheet section ends -->
+
+                <!-- table section starts -->
+                <div class="table-responsive table-bordered ">
+                    <table class="table table-hover text-center mt-3" id="myTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Project name</th>
+                                <th scope="col">Staff member</th>
+                                <th scope="col">Check in</th>
+                                <th scope="col">Check out</th>
+                                <th scope="col">Total amount</th>
+                                <th scope="col">Work status</th>
+                                <th scope="col">Photo</th>
+                                <th scope="col">Buy any equipment</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row" class="align-middle">Mountain View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn orange-btn p-1">Pending</button></td>
+                                <td>No</td>
+                                <td>No</td>
+                                <td>08-23-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="yellow-btn btn p-1">On Hold</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-22-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="yellow-btn btn p-1">On Hold</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-22-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn green-btn p-1">Completed</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-20-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn green-btn p-1">Completed</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-18-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn green-btn p-1">Completed</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-16-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn green-btn p-1">Completed</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-14-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn green-btn p-1">Completed</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-10-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn green-btn p-1">Completed</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-10-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Forest View</td>
+                                <td>Alexzander McQueen</td>
+                                <td>8:00 am</td>
+                                <td>6:00 am</td>
+                                <td>$510.34</td>
+                                <td><button class="btn green-btn p-1">Completed</button></td>
+                                <td>yes</td>
+                                <td>No</td>
+                                <td>08-10-2022</td>
+                                <td><i class='bx bx-dots-vertical-rounded table-dot text-danger'></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table section ends -->
+                <!-- pagination section starts -->
+                <div class="pagination mt-3 p-3 d-flex flex-column d-sm-flex flex-sm-row align-items-sm-center justify-content-sm-between">
+                    <div class="page-left">
+                        <p class="text-secondary">Showing 1 to 10 of 200 Entires</p>
+                    </div>
+                    <div class="page-right">
+                        <ul class="d-flex align-items-center ps-0 justify-content-between">
+                            <li><a href="#" class="text-secondary mx-3"><i class='bx bx-chevron-left'></i></a></li>
+                            <li><a href="#" class="text-secondary mx-3 pg-a">1</a></li>
+                            <li><a href="#" class="text-secondary mx-3 pg-a">2</a></li>
+                            <li><a href="#" class="text-secondary mx-3 pg-a">3</a></li>
+                            <li><a href="#" class="text-secondary mx-3 pg-a">...</a></li>
+                            <li><a href="#" class="text-secondary mx-3"><i class='bx bx-chevron-right'></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- pagination section ends -->
+                <!-- footer section starts -->
+                <footer class="footer text-center mt-2 mb-2 p-3 bg-light">
+                    <p class="fw-normal">Designed by Gowebez </p>
+                </footer>
+                <!-- footer section ends -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

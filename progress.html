@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #e5e5e5;
+        }
+        .content{
+            display: flex;
+        }
+        .sidemenu{
+            width: 15%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            background-color: #002664 ;
+
+        }
+        .d-flex{
+            display: flex;
+            justify-content: center;
+        }
+        .img{
+            margin-top: 10px;
+            width: 100px;
+        }
+        .sidebar-ul{
+            padding-left: 20px;
+
+        }
+        .li{
+            list-style: none;
+            padding: 5px 0 ;
+            /* border-bottom: 1px solid #fff; */
+        }
+        .li a{
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+        }
+        .li a:hover{
+            background-color: #fc630a;
+            color: #fff !important;
+        }
+        .li a:active{
+            /* background-color: orange; */
+            color: #fc630a;
+        }
+        .li a img{
+            width: 15px;
+            margin-right: 10px;
+        }
+        .progress{
+            margin-left: 15%;
+            border: 1px solid #333;
+            width: 100%;
+            padding: 0 12px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .progress h3{
+            color: #212529;
+            font-size: 25px;;
+        }
+
+        @media (min-width:768px) {
+            .progress img {
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- desktop sidebar -->
+        <div class="sidemenu col-lg-4 p-3 " id="">
+            <div class="offcanvas-header d-flex justify-content-center">
+                <img src="./assets/img/Icons/ats_logo.png" alt="" class="img">
+            </div>
+            <div class="offcanvas-body">
+                <ul class="sidebar-ul">
+
+                    <li class="li"><a href="./progress.html" class="an"><img
+                                src="./assets/img/Icons/Admin/dashboard.svg" alt=""> Dashboard</a></li>
+
+                    <li class="li"><a href="./progress.html" class="an"><img
+                                src="./assets/img/Icons/Admin/task_list.svg" alt=""> Task View</a></li>
+
+                    <li class="li"><a href="./progress.html" class="an"><img src="./assets/img/Icons/Admin/schedule.svg"
+                                alt=""> Schedule</a></li>
+
+                    <li class="li"><a href="./index.html" class="an"><img src="./assets/img/Icons/User/timesheet.svg" alt="">
+                            Timesheet</a></li>
+
+                    <li class="li"><a href="./progress.html" class="an"><img src="./assets/img/Icons/Admin/invoice.svg"
+                                alt=""> Invoice</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- desktop sidebar ends -->
+        <div class="progress">
+            <!-- <img src="./assets/img/TintedFemaleFieldspaniel-max-1mb.gif" alt=""> -->
+            <h3>In progress</h3>
+        </div>
+    </div>
+</body>
+
+</html>
